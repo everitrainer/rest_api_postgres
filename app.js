@@ -8,7 +8,7 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import cors from 'cors';
 import { Movie, Actor, MovieActor, User, MovieRating } from './models/index.js';
-
+import { Sequelize } from 'sequelize';
 
 const app = express();
 app.use(express.json());
