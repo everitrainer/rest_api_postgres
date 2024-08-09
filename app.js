@@ -56,7 +56,7 @@ app.get('/api/public/movies', async (req, res) => {
                 attributes: []
             },
             attributes: {
-                include: [[sequelize.fn('AVG', sequelize.col('MovieRatings.rating')), 'rating']]
+                include: [[Sequelize.fn('AVG', Sequelize.col('MovieRatings.rating')), 'rating']]
             },
             group: ['Movie.id']
         });
@@ -75,7 +75,7 @@ app.get('/api/public/movies/:movieId', async (req, res) => {
                 attributes: []
             },
             attributes: {
-                include: [[sequelize.fn('AVG', sequelize.col('MovieRatings.rating')), 'rating']]
+                include: [[Sequelize.fn('AVG', Sequelize.col('MovieRatings.rating')), 'rating']]
             },
             group: ['Movie.id']
         });
